@@ -43,10 +43,12 @@ body {
 
 
 .hellocard {
+    background-image: url('../img/main/card_blur.png');
     backdrop-filter: blur(20px);
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.24);
+    border: 1px solid transparent;
+    border-image-source: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.24) 0%, #838181 100%);
 }
 
 .text-motion-wrapper {
@@ -57,8 +59,8 @@ body {
 
 .text-motion {
     white-space: nowrap; 
-    animation: move-right-card 10s linear infinite; 
-    padding-left: 100%;
+    animation: move-right-card 7s linear infinite; 
+    padding: 0 0 0 2vh;
 }
 
 @keyframes move-right-card {
@@ -81,6 +83,7 @@ body {
     flex-direction: column;
     gap: 50px;
     justify-content: space-around;
+    max-width: 60%;
 }
     .projects .card {
         display: flex;
@@ -130,6 +133,31 @@ body {
     }
 
 
+/*.intro-descrtiption {
+    overflow: hidden;
+    border-right: .15em solid white; 
+    white-space: normal;
+    animation: typing 4s steps(30, end), blink .5s step-end linear;
+}
+
+@keyframes typing {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+        border-color: transparent;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}*/
 
 
 
